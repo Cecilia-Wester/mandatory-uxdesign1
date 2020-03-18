@@ -52,8 +52,7 @@
   height: 100%;
   border-radius: 4px;
   background-color: lightgray;
-  border-bottom-color: rgb(0, 0, 0);
-  border-bottom: 1px;
+  border-bottom: 1px solid darksalmon;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -63,32 +62,51 @@
   line-height: 24px;
   top: 0px;
   left: 0px;
-  
-}
-
-.textInputField:focus{
-  border-bottom: 2px solid rgb(233, 121, 233);
+  padding-left: 12px;
+  display: block;
 }
 
 label{
   font-size: 16px;
-  padding-left: 12px;
-  padding-right: 12px;
   position: absolute;
-  top: 16px;
-  left: 0px;  
-  transform: translateY(-5px);
+  bottom: 16px;
+  left: 0px; 
+  line-height: 16px; 
+  transform: translateY(0px) translateX(12px) scale(1.0);
+  transform-origin: 0 0;
   transition: all 0.5s linear;
+  color: black;
 }
 
 .textInputField:focus + label{
-  font-size: 0.8rem;
-  padding: 12px;
   position: absolute;
-  top: -6px;
-  left:0px;
-  color: rgb(233, 121, 233);
-  transform: translateY(-5px);
+  color: rgb(139, 39, 139);
+  transform: translateY(-15px) translateX(12px) scale(0.75);
+  transform-origin: 0 0;
   transition: all 0.5s linear;
 }
 
+.textInputFieldBottom{
+  height: 1px;
+  width: 0px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  visibility: hidden;
+  background-color: darkgrey;
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: 0.5s;
+}
+
+.textInputField:focus + .textInputFieldBottom{
+  height: 2px;
+  width: 100%;
+  display: inline-block;
+  visibility: visible;
+  background-color: darkorange;
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: 0.5s;
+}

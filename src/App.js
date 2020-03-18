@@ -15,12 +15,35 @@ function App() {
               <input
                 className='textInputField'
                 id='textInputField'
-                type='text field' 
+                type='text' 
               />
               <label className='labelTextInputField' for='textInputField'> Name </label>
-
+              <div className='textInputFieldBottom'></div>
           </div>
-        
+          <div className='switchContainer'>
+            <input
+              className='switch'
+              id='switch'
+              type='checkbox'
+            />
+            <label className='labelSwitch' for='switch'>On/Off</label>
+          </div>
+          <div className='checkboxContainer'>
+            <input
+              className='checkbox'
+              id='checkbox'
+              type='checkbox'
+            />
+            <label className='labelCheckbox' for='checkbox'>Yes/No</label>
+          </div>
+          <div className='radiobtnContainer'>
+            <input
+              className='radiobutton'
+              id='radiobutton'
+              type='radiobutton'
+            />
+            <label className='labelRadiobutton' for='radiobutton'>On/Off</label>
+          </div>
         </form>
 
       </header>

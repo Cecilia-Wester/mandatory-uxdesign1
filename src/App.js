@@ -10,14 +10,19 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <form className='form'>
+          <div className='textInputFieldContainer'>
+              <input
+                className='textInputField'
+                id='textInputField'
+                type='text field' 
+              />
+              <label className='labelTextInputField' for='textInputField'> Name </label>
+
+          </div>
+        
+        </form>
+
       </header>
     </div>
   );

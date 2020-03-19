@@ -64,6 +64,7 @@
   left: 0px;
   padding-left: 12px;
   display: block;
+  box-sizing: border-box;
 }
 
 label{
@@ -87,26 +88,21 @@ label{
 }
 
 .textInputFieldBottom{
-  height: 1px;
-  width: 0px;
-  overflow: hidden;
+  height: 2px;
+  width: 0;
   position: absolute;
   bottom: 0px;
-  left: 0px;
-  visibility: hidden;
-  background-color: darkgrey;
+  left: 50%;
+  background-color: red;
   transform: translateX(-50%);
   transform-origin: center;
   transition: 0.5s;
 }
-
-.textInputField:focus + .textInputFieldBottom{
-  height: 2px;
+.textInputField:focus ~ .textInputFieldBottom{
   width: 100%;
-  display: inline-block;
-  visibility: visible;
   background-color: darkorange;
-  transform: translateX(-50%);
-  transform-origin: center;
-  transition: 0.5s;
+}
+
+.switchContainer {
+
 }

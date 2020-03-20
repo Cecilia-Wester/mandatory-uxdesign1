@@ -1,24 +1,37 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
-import Textfield from './Textfield';
-import Switch from './Switch';
-import Checkbox from './Checkbox';
-import Radiobutton from './Radiobutton';
+import Textfield from './Components/Textfield/Textfield';
+import Switch from './Components/Switch/Switch';
+import Checkbox from './Components/Checkbox/Checkbox';
+import Radiobutton from './Components/Radiobutton/Radiobutton';
 
 export default function App() {
+  const [disabled, setDisabled] = useState(false);
+  
+  function onClickDisable(e){
+    e.preventDefault()
+    if(disabled){
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
+  }
+  
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>A small questionair -</h1>
-        <h3> are you connected or disconnected?</h3>
+        <h3> are you able or disabled?</h3>
       </header>
       <main>
         <form className='form'>
-          <Textfield />
-          <Switch />
-          <Checkbox />
-          <Radiobutton />
+          <Textfield disabled={disabled}/>
+          <Switch disabled={disabled}/>
+          <Checkbox disabled={disabled}/>
+          <Radiobutton disabled={disabled}/>
         </form>
+        <button className='disableButton' onClick={onClickDisable}>Disable</button>
       </main>      
     </div>
   );

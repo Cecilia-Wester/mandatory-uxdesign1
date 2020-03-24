@@ -23,6 +23,12 @@
     padding-left: 12px;
     display: block;
     box-sizing: border-box;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .textInputField:hover{
+    background-color: rgb(165, 164, 164);
   }
   
   label{
@@ -36,6 +42,10 @@
     transition: all 0.5s linear;
     color: black;
   }
+
+  .textInputField:focus{
+    background-color: lightgrey;
+  }
   
   .textInputField:focus + label{
     position: absolute;
@@ -44,10 +54,22 @@
     transform-origin: 0 0;
     transition: all 0.5s linear;
   }
-  
-  /* .textInputField:disabled{
-    background-color: red;
-  } */
+
+  .textInputField:valid + label{
+    position: absolute;
+    color: rgb(139, 39, 139);
+    transform: translateY(-15px) translateX(12px) scale(0.75);
+    transform-origin: 0 0;
+    transition: all 0.5s linear;
+  }
+
+  .textInputField:disabled:valid + label{
+    position: absolute;
+    color: rgb(139, 39, 139);
+    transform: translateY(-15px) translateX(12px) scale(0.75);
+    transform-origin: 0 0;
+    transition: all 0.5s linear;
+  }
   
   .textInputFieldBottom{
     height: 2px;
@@ -66,3 +88,8 @@
     background-color: darkorange;
   }
   
+ .textInputField:disabled{
+  pointer-events: none;
+  opacity: .3;
+  transition: .3s;
+ }  

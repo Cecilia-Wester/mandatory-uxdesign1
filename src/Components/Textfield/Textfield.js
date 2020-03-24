@@ -1,16 +1,20 @@
-import React from 'react';
-import './Textfield.css'
+import React, { useState } from 'react';
+import './Textfield.css';
 
-export default function Textfield (disabled){
+export default function Textfield ({disabled, value, onChange}){
     return(
-        <div className='textInputFieldContainer' style={{backgroundColor: disabled ? 'red' : null}}>
+        <div className='textInputFieldContainer'>
             <input
                 className='textInputField'
                 id='textInputField'
                 type='text' 
                 disabled={disabled}
+                value={disabled ? '' : value}
+                onChange={onChange}
+                minLength={0}
+                required
             />
-            <label className='labelTextInputField' htmlFor='textInputField'> Name </label>
+            <label className='labelTextInputField' htmlFor='textInputField'> Favorite pizza </label>
             <div className='textInputFieldBottom'></div>
         </div>
     )

@@ -7,6 +7,8 @@ import Radiobutton from './Components/Radiobutton/Radiobutton';
 
 export default function App() {
   const [disabled, setDisabled] = useState(false);
+  const [value, setValue] = useState('');
+  const [checkboxValue, setCheckboxValue] = useState(false)
   
   function onClickDisable(e){
     e.preventDefault()
@@ -16,19 +18,23 @@ export default function App() {
       setDisabled(true);
     }
   }
-  
 
-  return (
+  function onChange(e){
+    e.preventDefault()
+    setValue(e.target.value)
+  }
+
+  return (  
     <div className="App">
       <header className="App-header">
         <h1>A small questionair -</h1>
-        <h3> are you able or disabled?</h3>
+        <h3>Do you like pizza?</h3>
       </header>
       <main>
         <form className='form'>
-          <Textfield disabled={disabled}/>
+          <Textfield disabled={disabled} value={value} onChange={onChange}/>
           <Switch disabled={disabled}/>
-          <Checkbox disabled={disabled}/>
+          <Checkbox disabled={disabled} checked={checkboxValue} onChange={() => setCheckboxValue(true)}/>
           <Radiobutton disabled={disabled}/>
         </form>
         <button className='disableButton' onClick={onClickDisable}>Disable</button>

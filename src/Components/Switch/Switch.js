@@ -1,7 +1,7 @@
 import React from 'react';
 import './Switch.css'
 
-export default function Switch (disabled){
+export default function Switch ({disabled, value}){
     return(
         <div 
             className='switch'
@@ -11,6 +11,7 @@ export default function Switch (disabled){
                 id='switch'
                 type='checkbox'
                 disabled={disabled}
+                value={value}
                 />
                 <span className='slider'></span>
             </label>

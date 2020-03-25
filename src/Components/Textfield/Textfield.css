@@ -10,7 +10,7 @@
     height: 100%;
     border-radius: 4px;
     background-color: lightgray;
-    border-bottom: 1px solid darksalmon;
+    border-bottom: 1px solid grey;
     border-top: none;
     border-left: none;
     border-right: none;
@@ -49,35 +49,35 @@
   
   .textInputField:focus + label{
     position: absolute;
-    color: rgb(139, 39, 139);
-    transform: translateY(-15px) translateX(12px) scale(0.75);
+    color:  rgb(245, 2, 245);
+    transform: translateY(-16px) translateX(12px) scale(0.75);
     transform-origin: 0 0;
     transition: all 0.5s linear;
   }
 
   .textInputField:valid + label{
     position: absolute;
-    color: rgb(139, 39, 139);
+    color:  rgb(245, 2, 245);
     transform: translateY(-15px) translateX(12px) scale(0.75);
     transform-origin: 0 0;
     transition: all 0.5s linear;
   }
 
-  .textInputField:disabled:valid + label{
+  /* .textInputField:disabled:valid + label{
     position: absolute;
     color: rgb(139, 39, 139);
     transform: translateY(-15px) translateX(12px) scale(0.75);
     transform-origin: 0 0;
     transition: all 0.5s linear;
-  }
+  } */
   
   .textInputFieldBottom{
     height: 2px;
     width: 0;
     position: absolute;
-    bottom: 0px;
+    bottom: 1px;
     left: 50%;
-    background-color: red;
+    background-color:  rgb(245, 2, 245);
     transform: translateX(-50%);
     transform-origin: center;
     transition: 0.5s;
@@ -85,7 +85,7 @@
   
   .textInputField:focus ~ .textInputFieldBottom{
     width: 100%;
-    background-color: darkorange;
+    background-color:  rgb(245, 2, 245);
   }
   
  .textInputField:disabled{

@@ -37,8 +37,8 @@ export default function App() {
           <Checkbox disabled={disabled} checked={checkboxValue} onChange={() => setCheckboxValue(true)}/>
           <Radiobutton disabled={disabled}/>
         </form>
-        <button className='disableButton' onClick={onClickDisable}>Disable</button>
-      </main>      
+        <button className='disableButton' onClick={onClickDisable} style={{marginTop: '20px'}}>{disabled ?  'Use form': 'Disable form' }</button>
+      </main>
     </div>
   );
 }

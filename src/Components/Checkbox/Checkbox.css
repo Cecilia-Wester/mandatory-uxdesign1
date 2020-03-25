@@ -15,6 +15,7 @@
     cursor: pointer;
     height: 0;
     width: 0;
+    transition: .4s;
 }
 
 .checkmark {
@@ -23,12 +24,15 @@
     left: 0;
     height: 24px;
     width: 24px;
-    background-color: #eee;
+    background-color: #282c34;
     box-sizing: border-box;
+    border:1px solid white;
+    border-radius: 2px;
+    transition: .4s;
 }
 
 .checkboxContainer input:checked ~ .checkmark {
-    background-color: #6200EE;
+    background-color:  #6200eeff;
 }
 
 .checkmark:after {
@@ -42,21 +46,29 @@
 }
 
 .checkboxContainer .checkmark:after {
-    left: 9px;
-    top: 5px;
+    left: 7px;
+    top: 3px;
     width: 5px;
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
+    transition: .4s;
 }
 
 .checkboxContainer input:disabled ~ .checkmark{
     background-color: grey;
+    opacity: .3;
+    pointer-events: none;
+    transition: .4s;
 }
 
 .checkboxContainer input:focus ~ .checkmark{
-    background-color: lightgrey;
+    box-shadow: 0 0 0 1px #fff, 0 0 0 1rem rgba(221, 218, 218, 0.25);   
+    transition: .4s;
 }
 
+.checkmark:hover {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 1rem rgba(221, 218, 218, 0.25);   
+}
 

@@ -1,8 +1,7 @@
 .radiobuttonContainer{
- margin: 20px;
- padding-top: 20px;
- display: flex;
- 
+    margin: 20px;
+    padding-top: 20px;
+    display: flex;
 }
 
 .labelRadiobutton {
@@ -15,63 +14,68 @@
     cursor: pointer;
     font-size: 22px;
     user-select: none;
-  }
-  
-  /* Hide the browser's default radio button */
-  .labelRadiobutton input {
-    width: 0px;
-    height: 0px ;
+}
+
+.labelRadiobutton input {
+    width: 1px;
+    height: 1px ;
     position: absolute;
     opacity: 0;
     cursor: pointer;
-  }
-  
-  .radiobuttonAnswer{
-      color: white;
-      margin: 1px;
-  }
-  /* Create a custom radio button */
-  .radiobtnSpan {
+}
+
+.radiobuttonAnswer{
+    color: white;
+    margin: 1px;
+}
+
+.radiobtnSpan {
     position: absolute;
     top: 0;
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #eee;
+    background-color: #282c34;
     border-radius: 50%;
-    border: 2px solid purple;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .labelRadiobutton:hover input ~ .radiobtnSpan {
-    background-color: rgb(156, 155, 155);
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .labelRadiobutton input:checked ~ .radiobtnSpan {
-    background-color: rgb(156, 155, 155);
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .radiobtnSpan:after {
+    border: 2px solid  rgb(156, 155, 155);
+}
+
+.labelRadiobutton input:hover ~ .radiobtnSpan {
+    box-shadow:  0 0 0 1rem rgba(221, 218, 218, 0.25);
+    transition: .4s;
+}
+
+.labelRadiobutton input:focus ~ .radiobtnSpan{
+    box-shadow: 0 0 0 1rem rgba(221, 218, 218, 0.25);
+    transition: .4s;
+}
+
+.labelRadiobutton input:checked ~ .radiobtnSpan {
+    background-color: #282c34;
+}
+
+.radiobtnSpan:after {
     content: "";
     position: absolute;
     display: none;
 }
 
-  /* Show the indicator (dot/circle) when checked */
 .labelRadiobutton input:checked ~ .radiobtnSpan:after {
     display: block;
 }
 
-  /* Style the indicator (dot/circle) */
+.labelRadiobutton input:checked ~ .radiobtnSpan {
+    border-color: #6200eeff;
+}
+
 .labelRadiobutton .radiobtnSpan:after {
-    top: 3px;
-    left: 3px;
-    width: 15px;
-    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
-    background: purple;
+    background:  #6200eeff;
 }
 
 .labelRadiobutton input:disabled ~ .radiobtnSpan{

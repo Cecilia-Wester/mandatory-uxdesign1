@@ -1,5 +1,5 @@
 :root{
-  width: 100%;
+  width: 100%; 
 }
 
 .App {
@@ -16,4 +16,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.disableButton{
+  border-radius: 36px;
+  outline: none;
+  border: none;
+  width: 150px;
+  height: 30px;
+  margin-bottom: 30px;
+}
+
+.disableButton:hover{
+  cursor: pointer;
+  background-color: rgb(156, 155, 155);
 }
